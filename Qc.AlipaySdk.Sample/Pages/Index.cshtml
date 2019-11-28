@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "测试";
+}
+<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+<script>
+    function oauthLogin() {
+        window.ap&&ap.getAuthCode({
+            appId: '@(Model.AppId)',
+            scopes: ['auth_user'],
+            showErrorTip:false,
+        }, function (res) {
+                //ap.alert(JSON.stringify(res));
+                if (res.authCode) {
+                    location.href = "/?state=callback&auth_code=" + res.authCode;
+                } else {
+                    ap.alert(res.errorMessage)
+                }
+        });
+        return false;
+    }
+</script>
+<form method="post">
+    <button asp-page-handler="OauthLogin">Pc 授权登录</button>
+    <button asp-page-handler="RedirectOauthLogin">支付宝跳转授权登录</button>
+    <button type="button" onclick="oauthLogin()">支付宝JS授权登录</button>
+</form>
