@@ -4,7 +4,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>yimo</Authors>
     <Product>Qc.AlipaySdk</Product>
-    <Description>Qc.AlipaySdk 基于 `.NET Standard 2.0 构建，对支付宝开放平台的接口（网页授权登录）进行了封装</Description>
+    <Description>Qc.AlipaySdk 基于 .NET Standard 2.0 构建，对支付宝开放平台的接口（网页授权登录）进行了封装</Description>
     <Company>QcCoding</Company>
     <PackageProjectUrl>https://github.com/QcCoding/Qc.AlipaySdk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/QcCoding/Qc.AlipaySdk</RepositoryUrl>
